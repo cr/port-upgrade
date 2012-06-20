@@ -1,0 +1,6 @@
+#!/bin/sh
+port "$@" selfupdate \
+&& port "$@" sync \
+&& port -pucR "$@" upgrade outdated \
+&& port uninstall inactive
+
